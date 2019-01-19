@@ -1,0 +1,26 @@
+{
+  "name": "devtips",
+  "version": "1.0.0",
+  "description": "Thoughts, notes, tips & tricks on web development and other areas of software development i find interesting. ",
+  "main": "index.htm",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Njunge11/devtips.git"
+  },
+  "keywords": [
+    "webdev",
+    "devops"
+  ],
+  "author": "Njunge Njenga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Njunge11/devtips/issues"
+  },
+  "homepage": "https://github.com/Njunge11/devtips#readme",
+  "dependencies": {
+    "buttercms": "^1.1.4"
+  }
+}
