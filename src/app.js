@@ -1,13 +1,15 @@
 import BlogSection from "./BlogSection.js";
+import BlogPost from "./BlogPost.js"
 import Utils from "./Utils.js"
 
 const routes = {
-  "/": BlogSection
+  "/": BlogSection,
+  "/posts/:id":BlogPost
 };
 
 const router = async () => {
 //   const header = document.querySelector("#header");
-  const content = document.querySelector(".most-recent-posts");
+  const content = document.querySelector(".container-fluid");
 //   const footer = document.querySelector("#footer");
 
   const request = Utils.parseRequestURL();
