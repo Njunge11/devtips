@@ -7,7 +7,7 @@ const routes = {
 
 const router = async () => {
 //   const header = document.querySelector("#header");
-  const content = document.querySelector(".blog");
+  const content = document.querySelector(".most-recent-posts");
 //   const footer = document.querySelector("#footer");
 
   const request = Utils.parseRequestURL();
@@ -16,6 +16,7 @@ const router = async () => {
     (request.id ? "/:id" : "") +
     (request.verb ? "/" + request.verb : "");
   const page = routes[parsedURL] ? routes[parsedURL] : "kuna error msee";
+  console.log('page', page)
   content.innerHTML = await page.render();
   await page.after_render();
 };
