@@ -1,2 +1,2 @@
 # devtips
-The code that powers [devtips.io](https:devtips.io)
+The code that powers [devtips.io](https://devtips.io)
