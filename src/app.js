@@ -20,6 +20,7 @@ const router = async () => {
   const page = routes[parsedURL] ? routes[parsedURL] : "kuna error msee";
   console.log('page', page)
   content.innerHTML = await page.render();
+  Prism.highlightAll();
   await page.after_render();
 };
 
