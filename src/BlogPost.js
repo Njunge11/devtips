@@ -17,7 +17,6 @@ const BlogPost = {
         ${posts.data.data[0].body}
         </div>
         </div>
-    
     `;
     return view;
   },
