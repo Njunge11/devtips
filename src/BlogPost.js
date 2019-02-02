@@ -5,15 +5,13 @@ const getBlogPosts = async () => {
   return test
 };
 
-
- 
 const BlogPost = {
   render: async () => {
     const posts = await getBlogPosts();
     const view = `
     <div class="row">
       <div class="col-md-6 mx-auto">
-        <h1>${posts.data.data[0].title}</h1>
+        <h1 class="title">${posts.data.data[0].title}</h1>
         ${posts.data.data[0].body}
         </div>
         </div>

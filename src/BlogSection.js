@@ -14,7 +14,7 @@ const BlogSection = {
     <div class="row blog">
     <div class="col-md-10 mx-auto">
     <div class="row">
-    <div class="col-md-7 mx-auto">
+    <div class="col-md-8 mx-auto">
     <div class="text-center">
     <h1 class="blog-title">Blog</h1>
     <p class="blog-desc"> Thoughts, notes, tips & tricks on web development and other
@@ -24,8 +24,8 @@ const BlogSection = {
     </div>
     <div class="row">
     <div class="col-md-6">
-      <div class="card bg-dark text-white">
-        <img src="images/scroll.jpg" class="card-img" alt="image" />
+      <div class="card text-white">
+        <img src=${posts.data.data[0].featured_image} class="card-img" alt="image" />
         <div class="card-img-overlay">
           <p>${posts.data.data[0].categories[0].name.toUpperCase() ||
             "Misc"}</p>
