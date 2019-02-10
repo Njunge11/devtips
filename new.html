@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Devtips - A blog by Njunge Njenga</title>
+  </head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+  />
+
+  <style>
+    .my-image {
+      border-radius: 100%;
+      width: 150px;
+    }
+    .image-section {
+      margin-top: 2rem;
+    }
+    .site-title-section,
+    .desc-title-section,
+    .tabs-section {
+      margin-top: 1rem;
+    }
+
+    .site-title {
+      font-size: 2.5rem;
+      color: #212529;
+    }
+    .site-title:hover {
+      color: #1565c0;
+      text-decoration: none;
+    }
+    .desc-title-section {
+        color:#6C7A89;
+    }
+    .tabs-section {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .nav-link {
+      display: block;
+      padding: 0.5rem 3rem;
+      color: #212529;
+    }
+    a:hover {
+      color: #212529;
+      text-decoration: underline;
+    }
+    .post {
+      margin-bottom: 3rem;
+      padding-left: 2rem;
+    }
+    .active {
+      border-bottom: 5px solid #1565c0;
+    }
+    .about {
+      display: none;
+    }
+    .blog-title {
+      color: #1565c0;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <!--Header Start-->
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="image-section text-center">
+            <img
+              class="my-image img-fluid"
+              src="images/me.jpeg"
+              alt="My image"
+            />
+          </div>
+          <div class="text-center">
+            <a class="site-title" href="">devtips.io</a>
+          </div>
+          <h5 class="desc-title-section text-center">
+            Web development tips & tricks.
+          </h5>
+          <nav class="nav tabs-section justify-content-center">
+            <a id="latest" class="nav-link active" href="#">Latest</a>
+            <a id="about" class="nav-link" href="#">About</a>
+            <a id="contact" class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <!-- Header End -->
+
+      <div class="row latest">
+        <div class="col-md-6 mx-auto">
+          <div class="post">
+            <h2 class="blog-title">
+              Lazy loading images using the Intersection Observer API
+            </h2>
+            <span>February </span> <span>4</span> <span>,</span>
+            <span>2019</span>
+            <p>How I learned to stop worrying and love refs.</p>
+          </div>
+          <div class="post">
+            <h2 class="blog-title">
+              Effortlessly build one page smooth scrolling using vanilla
+              javascript
+            </h2>
+            <span>February </span> <span>4</span> <span>,</span>
+            <span>2019</span>
+            <p>How I learned to stop worrying and love refs.</p>
+          </div>
+          <div class="post">
+            <h2 class="blog-title">
+              Making setInterval Declarative with React Hooks
+            </h2>
+            <span>February </span> <span>4</span> <span>,</span>
+            <span>2019</span>
+            <p>How I learned to stop worrying and love refs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row about">
+        <div class="col-md-6 mx-auto">
+          <h1>Hello</h1>
+          <p>
+            I'm Njunge, and this my personal blog. I built it primarily to share
+            my thoughts, notes, tips & tricks on web development and other areas
+            of software development i find interesting.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const latestLink = document.querySelector("#latest");
+      const aboutLink = document.querySelector("#about");
+      const contactLink = document.querySelector("#contact");
+      latestLink.onclick = () => {
+        latestLink.classList.add("active");
+        removeActiveSelector(aboutLink, contactLink);
+      };
+      aboutLink.onclick = () => {
+        aboutLink.classList.add("active");
+        removeActiveSelector(latestLink, contactLink);
+      };
+      contactLink.onclick = () => {
+        contactLink.classList.add("active");
+        removeActiveSelector(latestLink, aboutLink);
+      };
+
+      function removeActiveSelector(firstLink, secondLink) {
+        if (firstLink.classList.contains("active")) {
+          firstLink.classList.remove("active");
+        } else {
+          secondLink.classList.contains("active");
+          secondLink.classList.remove("active");
+        }
+      }
+    </script>
+  </body>
+</html>
